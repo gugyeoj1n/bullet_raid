@@ -33,6 +33,7 @@ private:
 	void LookUp(float AxisValue);
 	void MoveRight(float AxisValue);
 	void LookRight(float AxisValue);
+	void Shoot();
 
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<AGun> GunClass;
