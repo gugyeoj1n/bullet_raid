@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "ShooterCharacter.generated.h"
 
+class AGun;
+
 UCLASS()
 class BULLET_RAID_API AShooterCharacter : public ACharacter
 {
@@ -31,4 +33,10 @@ private:
 	void LookUp(float AxisValue);
 	void MoveRight(float AxisValue);
 	void LookRight(float AxisValue);
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AGun> GunClass;
+
+	UPROPERTY()
+	AGun* Gun;
 };
