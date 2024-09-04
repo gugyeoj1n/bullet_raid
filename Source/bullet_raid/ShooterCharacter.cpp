@@ -68,3 +68,8 @@ float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 	UE_LOG(LogTemp, Warning, TEXT("Health Left %f"), CurrentHealth);
 	return AppliedDamage;
 }
+
+bool AShooterCharacter::IsDead() const
+{
+	return CurrentHealth <= 0;
+}
